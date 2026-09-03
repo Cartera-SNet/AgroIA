@@ -125,6 +125,7 @@ def main():
 
     # url_path usa el propio token como "carpeta secreta" para que nadie mas
     # le mande updates falsos a tu webhook sin saber el token.
+    
     webhook_path = TELEGRAM_TOKEN
     webhook_url = f"{PUBLIC_URL.rstrip('/')}/{webhook_path}"
 
