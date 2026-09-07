@@ -154,11 +154,12 @@ def main():
     # una pregunta en lenguaje natural.
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, manejar_mensaje))
 
+    public_url = PUBLIC_URL.rstrip("/")
     app.run_webhook(
         listen="0.0.0.0",
         port=PORT,
         url_path=TELEGRAM_TOKEN,
-        webhook_url=f"{PUBLIC_URL}/{TELEGRAM_TOKEN}",
+        webhook_url=f"{public_url}/{TELEGRAM_TOKEN}",
     )
 
 
