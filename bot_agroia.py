@@ -27,7 +27,7 @@ PUBLIC_URL = os.environ["PUBLIC_URL"]
 PORT = int(os.environ.get("PORT", 8080))
 GROQ_API_KEY = os.environ["GROQ_API_KEY"]
 
-GROQ_MODEL = "llama-3.3-70b-versatile"  # rápido y gratis en Groq
+GROQ_MODEL = "openai/gpt-oss-120b"  # llama-3.3-70b-versatile fue descontinuado por Groq
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
